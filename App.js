@@ -1,22 +1,19 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { createStackNavigator } from 'react-navigation';
+import { HomeScreen, BagOutScreen, BinOutScreen } from './components/screens';
+
+const RootStack = createStackNavigator(
+	{
+		Home: { screen: HomeScreen },
+		BagOut: { screen: BagOutScreen },
+		BinOut: { screen: BinOutScreen },
+	},{
+		initialRouteName: 'Home',
+	}
+);
 
 export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Poubelle la vie !</Text>
-        <Text>Sortez vos poubelles :)</Text>
-      </View>
-    );
-  }
+	render() {
+		return <RootStack />;
+	}
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

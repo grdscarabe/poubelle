@@ -1,6 +1,7 @@
 {
   "expo": {
     "sdkVersion": "27.0.0",
-    "name": "Poubelle la vie!"
+    "name": "Poubelle la vie!",
+    "slug": "poubelle-la-vie"
   }
 }
